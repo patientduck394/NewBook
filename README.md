@@ -37,6 +37,8 @@ There are also tags for formatting text and not changing the color:
 <bl> # Makes text blink.
 <d> # Dims text.
 <u> # Underlines text.
+<encrypt> # Makes text invisible (compatible with readline history!)
+<rev> # Flips the text color and the background color
 ```
 There are also hybrid tags which format the text AND change the color:
 ```python
