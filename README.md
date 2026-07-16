@@ -5,6 +5,10 @@ Must have the Colorama library to function. (requires install)<br>
 If you're using a Unix-like operating system (Linux, macOS, and WSL), the `readline` library will work fine. If you are not using a Unix-like operating system, then an error message with the visible tag `<SYS-ERR>` will say `The readline module is not available on this system. Command history will not be available.` This will be updated soon and will be put in this `README.md` file instead of the terminal.
 
 # Formatting
+Quick note: the tags cannot be used in combination and must be used like this: `<green>Green text!` for this version. <br>
+Tags that cannot be used in the Mac terminal correctly will be labeled with ❌🍏. <br>
+Since some tags use unsupported ANSI codes, some are unusable for certain platforms and will be labeled accordingly. <br>
+<br>
 Use these tags for colored text:
 ```python
 <green> # Makes text green.
@@ -27,5 +31,16 @@ There is also a collection of other tags for lighter colors:
 <lwhite> # Makes text light-white.
 <lblack> # Makes text light-black.
 ```
-More tags will be released in version 1.1, so stay tuned!<br>
+There are also tags for formatting text and not changing the color:
+```python
+<i> # Makes text italic. (❌🍏)
+<bl> # Makes text blink.
+<d> # Dims text.
+<u> # Underlines text.
+```
+There are also hybrid tags which format the text AND change the color:
+```python
+<redacted> # Makes text gray and has a strikethrough. (❌🍏)
+```
+More tags will be released in version 1.2, so stay tuned!<br>
 Happy notetaking!
