@@ -1,5 +1,6 @@
-## NewBook Ver. 1.0 c
+## NewBook Ver. 1.1 c
 
+import sys
 import os
 try:
     import readline
@@ -16,7 +17,8 @@ def menu():
     cmd = "nil"
     while not cmd == "exitp":
         cmd = input("").strip()
-        print("\033[F\033[K", end="")
+        sys.stdout.write("\033[A\033[2K")
+        sys.stdout.flush()
         if cmd == "exitp":
             placeholder = "nil"
         else:
@@ -44,6 +46,9 @@ def menu():
             elif "<black>" in cmd:
                 cmd = cmd.replace("<black>", "")
                 print(Fore.BLACK + cmd)
+            elif "<gray>" in cmd:
+                cmd = cmd.replace("<gray>", "")
+                print("\033[90m" + cmd + "\033[0m")
             elif "<lgreen>" in cmd:
                 cmd = cmd.replace("<lgreen>", "")
                 print(Fore.LIGHTGREEN_EX + cmd)
@@ -68,8 +73,24 @@ def menu():
             elif "<lblack>" in cmd:
                 cmd = cmd.replace("<lblack>", "")
                 print(Fore.LIGHTBLACK_EX + cmd)
+            elif "<i>" in cmd:
+                cmd = cmd.replace("<i>", "")
+                print("\033[3m" + cmd + "\033[0m")
+            elif "<bl>" in cmd:
+                cmd = cmd.replace("<bl>", "")
+                print("\033[5m" + cmd + "\033[0m")
+            elif "<d>" in cmd:
+                cmd = cmd.replace("<d>", "")
+                print("\033[2m" + cmd + "\033[0m")
+            elif "<u>" in cmd:
+                cmd = cmd.replace("<u>", "")
+                print("\033[4m" + cmd + "\033[0m")
+            elif "<redacted>" in cmd:
+                cmd = cmd.replace("<redacted>", "")
+                print("\033[9;90m" + cmd + "\033[0m")
             else:
                 print(cmd)
+
 
 
 def clearscreen():
@@ -84,7 +105,7 @@ def clearscreen():
 #--STARTUP--#
 
 clearscreen()
-print(Fore.YELLOW + "<SYS> NewBook Ver. 1.0 c")
+print(Fore.YELLOW + "<SYS> NewBook Ver. 1.1 c")
 print(Fore.YELLOW + '<SYS> Type "exitp" at any time to exit the program')
 print(Fore.YELLOW + '<SYS> Go to the README.md file to learn how to format your notes!')
 
