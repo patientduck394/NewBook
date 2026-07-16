@@ -1,4 +1,4 @@
-## NewBook Ver. 1.1 c
+## NewBook Ver. 1.2 c
 
 import sys
 import os
@@ -88,6 +88,12 @@ def menu():
             elif "<redacted>" in cmd:
                 cmd = cmd.replace("<redacted>", "")
                 print("\033[9;90m" + cmd + "\033[0m")
+            elif "<encrypt>" in cmd:
+                cmd = cmd.replace("<encrypt>", "")
+                print("\033[8m" + cmd + "\033[0m")
+            elif "<rev>" in cmd:
+                cmd = cmd.replace("<rev>", "")
+                print("\033[7m" + cmd + "\033[0m")
             else:
                 print(cmd)
 
@@ -105,7 +111,7 @@ def clearscreen():
 #--STARTUP--#
 
 clearscreen()
-print(Fore.YELLOW + "<SYS> NewBook Ver. 1.1 c")
+print(Fore.YELLOW + "<SYS> NewBook Ver. 1.2 c")
 print(Fore.YELLOW + '<SYS> Type "exitp" at any time to exit the program')
 print(Fore.YELLOW + '<SYS> Go to the README.md file to learn how to format your notes!')
 
