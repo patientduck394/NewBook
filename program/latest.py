@@ -114,7 +114,7 @@ def menu():
                 cmd = cmd.replace("<lorange>", "")
                 cmd = cmd.lstrip()
                 print("\033[38;5;215m" + cmd)
-            elif "<lgray" in cmd:
+            elif "<lgray>" in cmd:
                 cmd = cmd.replace("<lgray>", "")
                 cmd = cmd.lstrip()
                 print("\033[38;5;246m" + cmd)
