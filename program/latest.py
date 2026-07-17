@@ -156,14 +156,14 @@ def menu():
                 cmd_list = cleaned_cmd.split(" ")
                 link = cmd_list[0]
                 linkitems = cmd_list[1:]
-                print(f"\033]8;;{link}\a{" ".join(linkitems)}\033]8;;\a")
+                print(f"\033]8;;{link}\a{' '.join(linkitems)}\033]8;;\a")
             elif "<bluelink>" in cmd:
                 cleaned_cmd = cmd.replace("<bluelink>", "")
                 cleaned_cmd = cleaned_cmd.lstrip()
                 cmd_list = cleaned_cmd.split(" ")
                 link = cmd_list[0]
                 linkitems = cmd_list[1:]
-                print(Fore.BLUE + f"\033]8;;{link}\a{" ".join(linkitems)}\033]8;;\a")
+                print(Fore.BLUE + f"\033]8;;{link}\a{' '.join(linkitems)}\033]8;;\a")
             elif "<wtitle.>" in cmd:
                 cmd = cmd.replace("<wtitle.>", "")
                 cmd = cmd.lstrip()
