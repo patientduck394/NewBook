@@ -1,4 +1,4 @@
-## NewBook Ver. 1.3 c
+## NewBook Ver. 1.4 c
 
 import sys
 import os
@@ -199,7 +199,7 @@ def clearscreen():
 #--STARTUP--#
 
 clearscreen()
-print(Fore.YELLOW + '<SYS> NewBook Ver. 1.3 c')
+print(Fore.YELLOW + '<SYS> NewBook Ver. 1.4 c')
 print(Fore.YELLOW + '<SYS> Type "exitp" at any time to exit the program')
 print(Fore.YELLOW + '<SYS> Go to the README.md file to learn how to format your notes!')
 
