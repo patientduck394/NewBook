@@ -2,10 +2,11 @@
 A notepad-style software that can be used inside your terminal! Supports Mac, Windows, and Linux. <br>
 Must have the Colorama library to function. (requires install)<br>
 <br>
-If you're using a Unix-like operating system (Linux, macOS, and WSL), the `readline` library will work fine. If you are not using a Unix-like operating system, then an error message with the visible tag `<SYS-ERR>` will say `The readline module is not available on this system. Command history will not be available.` This will be updated soon and will be put in this `README.md` file instead of the terminal.
+If you're using a Unix-like operating system (Linux, macOS, and WSL), the `readline` library will work fine. <br>
+The readline module does not work on Windows. (So, the history feature accessed by pressing the up arrow will not work if you're on Windows).
 
 # Formatting
-Quick note: the tags cannot be used in combination and must be used like this: `<green>Green text!` for this version. <br>
+Quick note: the tags cannot be used in combination. <br>
 Tags that cannot be used in the Mac terminal correctly will be labeled with ❌🍏. <br>
 Since some tags use unsupported ANSI codes, some are unusable for certain platforms and will be labeled accordingly. <br>
 <br>
@@ -39,10 +40,22 @@ There are also tags for formatting text and not changing the color:
 <u> # Underlines text.
 <encrypt> # Makes text invisible (compatible with readline history!)
 <rev> # Flips the text color and the background color
+<ov> # Adds an overline (underline that is on the top). (❌🍏)
+<link> # Formats a link (first message is the link, second is the text (separated by spaces)). (❌🍏)
 ```
 There are also hybrid tags which format the text AND change the color:
 ```python
-<redacted> # Makes text gray and has a strikethrough. (❌🍏)
+<redacted> # Makes text gray and has a strikethrough. (the strikethrough does not work on Mac ⚠️🍏)
+<bluelink> # If you added <blue> and <link> together!
 ```
-More tags will be released in version 1.2, so stay tuned!<br>
+There are also system tags which perform system actions:
+```python
+<wtitle.> # Changes the window name of the terminal. (partly works on Mac ⚠️🍏)
+^. # Moves the cursor up (beta)
+v. # Moves the cursor down. (beta)
+^x. # Moves the cursor up AND removes the line it moved to.
+vx. # Moves the cursor down AND removes the line it moved to.
+<clrscn> # Clears the terminal. (also removes the system messages).
+```
+More tags will be released in version 1.4, so stay tuned!<br>
 Happy notetaking!
