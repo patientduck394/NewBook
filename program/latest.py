@@ -5,7 +5,7 @@ import os
 try:
     import readline
 except ImportError:
-    print("<SYS_ERR> The \033[3mreadline\033[0m module is not available on this system. Command history will not be available.")
+    pass
 import subprocess
 import colorama
 from colorama import Fore, Back, Style
