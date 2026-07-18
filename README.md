@@ -57,7 +57,7 @@ There are also system tags which perform system actions:
 v. # Moves the cursor down. (beta)
 ^x. # Moves the cursor up AND removes the line it moved to.
 vx. # Moves the cursor down AND removes the line it moved to.
-<clrscn> # Clears the terminal. (also removes the system messages).
+<clrscn.> # Clears the terminal. (also removes the system messages).
 ```
 More tags will be released in version 1.6, so stay tuned!<br>
 Happy notetaking!
