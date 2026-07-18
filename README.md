@@ -38,10 +38,12 @@ There are also tags for formatting text and not changing the color:
 <bl> # Makes text blink.
 <d> # Dims text.
 <u> # Underlines text.
+<b> # Makes text bold.
 <encrypt> # Makes text invisible (compatible with readline history!)
 <rev> # Flips the text color and the background color
 <ov> # Adds an overline (underline that is on the top). (❌🍏)
 <link> # Formats a link (first message is the link, second is the text (separated by spaces)). (❌🍏)
+<color> # Allows you to change text to a custom color. (first 3 parameters are RGB and the rest is text)
 ```
 There are also hybrid tags which format the text AND change the color:
 ```python
@@ -57,5 +59,5 @@ v. # Moves the cursor down. (beta)
 vx. # Moves the cursor down AND removes the line it moved to.
 <clrscn> # Clears the terminal. (also removes the system messages).
 ```
-More tags will be released in version 1.4, so stay tuned!<br>
+More tags will be released in version 1.6, so stay tuned!<br>
 Happy notetaking!
