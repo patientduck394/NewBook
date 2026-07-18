@@ -1,4 +1,4 @@
-## NewBook Ver. 1.4 c
+## NewBook Ver. 1.5 c
 
 import sys
 import os
@@ -183,6 +183,20 @@ def menu():
                 cmd = cmd.replace("vx.", "")
                 sys.stdout.write("\033[1B")
                 sys.stdout.write("\033[2K")
+            elif "<color>" in cmd:
+                cleaned_cmd = cmd.replace("<color>", "")
+                cleaned_cmd = cleaned_cmd.lstrip()
+                cmd_list = cleaned_cmd.split(" ")
+                color1 = cmd_list[0]
+                color2 = cmd_list[1]
+                color3 = cmd_list[2]
+                colortext = cmd_list[3:]
+                cleancolortext = " ".join(colortext)
+                print(str(f"\x1b[38;2;{color1};{color2};{color3}m{cleancolortext}\x1b[0m"))
+            elif "<b>" in cmd:
+                cleaned_cmd = cmd.replace("<b>", "")
+                cleaned_cmd = cleaned_cmd.lstrip()
+                print(f"\033[1m" + cleaned_cmd + "\033[0m")
             else:
                 print(cmd)
 
@@ -199,7 +213,7 @@ def clearscreen():
 #--STARTUP--#
 
 clearscreen()
-print(Fore.YELLOW + '<SYS> NewBook Ver. 1.4 c')
+print(Fore.YELLOW + '<SYS> NewBook Ver. 1.5 c')
 print(Fore.YELLOW + '<SYS> Type "exitp" at any time to exit the program')
 print(Fore.YELLOW + '<SYS> Go to the README.md file to learn how to format your notes!')
 
