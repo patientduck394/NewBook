@@ -74,6 +74,11 @@ Graphite also has its own version of Markdown, called Writedown:
 * Example Text // Makes text into a bulleted list.
 - Example Text // Makes text into an unordered list.
 1. Example Text // Makes text into a numbered list. (There are numbered versions of this tag through 10).
+# Example Text // Makes text into a significant header.
+## Example Text // Makes text into a medium header.
+### Example Text // Makes text into a miniature header.
 ```
 More tags will be released in version 2.1, so stay tuned!<br>
 Happy notetaking!
+
+Fun Fact: Did you know `<reditalic>` was a tag before it got removed in the same update it was released while testing?
