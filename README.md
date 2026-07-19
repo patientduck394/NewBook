@@ -63,8 +63,9 @@ There are also help tags which can help you in certain ways:
 ```python
 <.help> # Shows useful help information.
 <.validtag> # Sends a success/error help message if the tag next to it is a valid tag.
+<calc> # Calculates a certain problem. Only 3 parameters (x, operation, and y). Make sure to write problems like 1 + 1 and not 1+1 or else it'll break.
 ```
-NewBook also has its own version of Markdown, called Writedown:
+Graphite also has its own version of Markdown, called Writedown:
 ```javascript
 <wd> // Text after this tag is formatted in Writedown.
 *Example Text* // Makes text underlined.
@@ -74,5 +75,5 @@ NewBook also has its own version of Markdown, called Writedown:
 - Example Text // Makes text into an unordered list.
 1. Example Text // Makes text into a numbered list. (There are numbered versions of this tag through 10).
 ```
-More tags will be released in version 1.7, so stay tuned!<br>
+More tags will be released in version 2.1, so stay tuned!<br>
 Happy notetaking!
