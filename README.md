@@ -59,5 +59,20 @@ v. # Moves the cursor down. (beta)
 vx. # Moves the cursor down AND removes the line it moved to.
 <clrscn.> # Clears the terminal. (also removes the system messages).
 ```
-More tags will be released in version 1.6, so stay tuned!<br>
+There are also help tags which can help you in certain ways:
+```python
+<.help> # Shows useful help information.
+<.validtag> # Sends a success/error help message if the tag next to it is a valid tag.
+```
+NewBook also has its own version of Markdown, called Writedown:
+```javascript
+<wd> // Text after this tag is formatted in Writedown.
+*Example Text* // Makes text underlined.
+**Example Text** // Makes text bold and yellow.
+`Example Text` // Makes text magenta/purple.
+* Example Text // Makes text into a bulleted list.
+- Example Text // Makes text into an unordered list.
+1. Example Text // Makes text into a numbered list. (There are numbered versions of this tag through 10).
+```
+More tags will be released in version 1.7, so stay tuned!<br>
 Happy notetaking!
