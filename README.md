@@ -1,4 +1,4 @@
-# NewBook
+# Graphite
 A notepad-style software that can be used inside your terminal! Supports Mac, Windows, and Linux. <br>
 Must have the Colorama library to function. (requires install)<br>
 <br>
