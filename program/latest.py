@@ -1,4 +1,4 @@
-## NewBook Ver. 1.6 c
+## Graphite Ver. 2.0 s
 
 import sys
 import os
@@ -298,6 +298,7 @@ def menu():
     cmd = "nil"
     while not cmd == "exitp":
         cmd = input("")
+        notes_history.append(cmd + "\n")
         if "^." or "v." not in cmd:
             sys.stdout.write("\033[A\033[2K")
         sys.stdout.flush()
@@ -489,11 +490,42 @@ def menu():
             elif "<.help>" in cmd:
                 play_system_alert("info")
                 print(Fore.YELLOW + '<SYS-HELP> Type exitp to exit.')
-                print(Fore.YELLOW + '<SYS-HELP> Go to the GitHub repository for formatting help!')
+                print(Fore.YELLOW + '           Go to the GitHub repository for formatting help!')
             elif "<wd>" in cmd:
                 cleaned_cmd = cmd.replace("<wd>", "")
                 cleaned_cmd = cleaned_cmd.lstrip()
                 print_markdown_to_terminal(cleaned_cmd)
+            elif "<calc>" in cmd:
+                cleaned_cmd = cmd.replace("<calc>", "")
+                cleaned_cmd = cleaned_cmd.lstrip()
+                cmd_list = cleaned_cmd.split(" ")
+                calcvar1 = int(cmd_list[0])
+                calcoperation = cmd_list[1]
+                calcvar2 = int(cmd_list[2])
+                if calcoperation == "+":
+                    print(Fore.GREEN + "<SYS-CALC> Answer: " + str((calcvar1 + calcvar2)))
+                elif calcoperation == "-":
+                    print(Fore.GREEN + "<SYS-CALC> Answer: " + str((calcvar1 - calcvar2)))
+                elif calcoperation == "*":
+                    print(Fore.GREEN + "<SYS-CALC> Answer: " + str((calcvar1 * calcvar2)))
+                elif calcoperation == "/":
+                    print(Fore.GREEN + "<SYS-CALC> Answer: " + str((calcvar1 / calcvar2)))
+                elif calcoperation == "^":
+                    print(Fore.GREEN + "<SYS-CALC> Answer: " + str((calcvar1 ^ calcvar2)))
+                elif calcoperation == "%":
+                    print(Fore.GREEN + "<SYS-CALC> Answer: " + str((calcvar1 + calcvar2)))
+                else:
+                    print(Fore.RED + "<SYS-CALC> Invalid calculation.")
+                    print(Fore.RED + "           Make sure to use allowed operations")
+                    print(Fore.RED + "           and write operations like 1 + 1 instead of 1+1")
+                    print(Fore.RED + "           so the engine can detect the first number, calculation, and second number properly.")
+            elif "<save.>" in cmd:
+                cleaned_cmd = cmd.replace("<save.>", "")
+                cleaned_cmd = cleaned_cmd.lstrip()
+                with open("history.txt", "w", encoding="utf-8") as file:
+                    # writelines() takes a list of strings and streams them straight into the file.
+                    # Because we added '\n' to each item, they will stack beautifully into real lines!
+                    file.writelines(notes_history)
             else:
                 print(cmd)
 
@@ -532,11 +564,13 @@ colorama.init(autoreset=True)
 disable_apple_terminal_marks()
 clearscreen()
 
-print(Fore.YELLOW + '<SYS> NewBook Ver. 1.6 c')
-print(Fore.YELLOW + '<SYS> Type "exitp" at any time to exit the program')
-print(Fore.YELLOW + '<SYS> Go to the README.md file to learn how to format your notes!')
-print(Fore.YELLOW + '<SYS> Type <.help> at any time for help!')
-print(Fore.YELLOW + '<SYS> Type restartp at any time to restart the program!')
+print(Fore.YELLOW + '<SYS> Graphite Ver. 2.0 s')
+print(Fore.YELLOW + '      Type "exitp" at any time to exit the program')
+print(Fore.YELLOW + '      Go to the README.md file to learn how to format your notes!')
+print(Fore.YELLOW + '      Type <.help> at any time for help!')
+print(Fore.YELLOW + '      Type restartp at any time to restart the program!')
+print(Fore.YELLOW + '      DID YOU KNOW: Graphite used to be called NewBook but had to be changed because of confusion with another website?')
+
 
 
 menu()
