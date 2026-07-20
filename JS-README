@@ -3,10 +3,10 @@ A notepad-style software that can be used inside your terminal! Supports Mac, Wi
 <br>
 
 # Install
-Make sure to download `latest.js` in the program folder, get Node.js (if you haven't already), and run these commands: (make sure to replace "(type-in-your-folder-path)" with your folder path!)
+Make sure to download `latest-js.js` in the program folder, get Node.js (if you haven't already), and run these commands: (make sure to replace "(type-in-your-folder-path)" with your folder path!)
 ```bash
 cd (type-in-your-folder-path)
-node Graphite.js
+node latest-js.js
 ```
 
 # Formatting
