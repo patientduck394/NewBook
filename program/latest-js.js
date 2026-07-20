@@ -10,7 +10,7 @@ function help() {
   // Simulates a background system save action or diagnostic log
   console.log("\x1b[33m<SYS-HELP> Type 'exitp' to exit \x1b[0m");
   console.log("\x1b[33m.          Go to the GitHub repository for formatting help, \x1b[0m");
-  console.log("\x1b[33m.          It's in the JS-README.md file! \x1b[0m");
+  console.log("\x1b[33m.          it's in the JS-README.md file! \x1b[0m");
 }
 
 const MACROS = {
