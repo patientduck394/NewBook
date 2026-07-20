@@ -1,0 +1,77 @@
+# Graphite
+A notepad-style software that can be used inside your terminal! Supports Mac, Windows, and Linux. <br>
+<br>
+
+# Install
+Make sure to download `latest.js` in the program folder, get Node.js (if you haven't already), and run these commands: (make sure to replace "(type-in-your-folder-path)" with your folder path!)
+```bash
+cd (type-in-your-folder-path)
+node Graphite.js
+```
+
+# Formatting
+Quick note: the tags can be used in combination but the <reset> tag is required at the end of each format you would like to finish.
+Tags that cannot be used in the Mac terminal correctly will be labeled with ❌🍏. <br>
+Since some tags use unsupported ANSI codes, some are unusable for certain platforms and will be labeled accordingly. <br>
+<br>
+Use these tags for colored text:
+```python
+<green> # Makes text green.
+<blue> # Makes text blue.
+<red> # Makes text red.
+<cyan> # Makes text cyan.
+<magenta> # Makes text magenta.
+<yellow> # Makes text yellow.
+<white> # Makes text white.
+<black> # Makes text black.
+```
+There is also a collection of other tags for lighter colors:
+```python
+<lgreen> # Makes text light-green.
+<lblue> # Makes text light-blue.
+<lred> # Makes text light-red.
+<lcyan> # Makes text light-cyan.
+<lmagenta> # Makes text light-magenta.
+<lyellow> # Makes text light-yellow.
+<lwhite> # Makes text light-white.
+<lblack> # Makes text light-black.
+```
+There are also tags that can be used to change the background color of certain text:
+```python
+<hgreen> # Makes the background of text green.
+<hblue> # Makes the background of text blue.
+<hred> # Makes the background of text red.
+<hcyan> # Makes the background of text cyan.
+<hmagenta> # Makes the background of text magenta.
+<hyellow> # Makes the background of text yellow.
+<hwhite> # Makes the background of text white.
+<hblack> # Makes the background of text black.
+```
+There are also tags that can be used to change the background color of certain text:
+```python
+<hlgreen> # Makes the background of text light-green.
+<hlblue> # Makes the background of text light-blue.
+<hlred> # Makes the background of text light-red.
+<hlcyan> # Makes the background of text light-cyan.
+<hlmagenta> # Makes the background of text light-magenta.
+<hlyellow> # Makes the background of text light-yellow.
+<hlwhite> # Makes the background of text light-white.
+<hlblack> # Makes the background of text light-black.
+```
+There are also tags for formatting text and not changing the color:
+```python
+<italic> # Makes text italic. (❌🍏)
+<dim> # Dims text.
+<underline> # Underlines text.
+<bold> # Makes text bold.
+<strikethrough> # Makes text have a strikethrough. (❌🍏)
+```
+There are also help tags which can help you in certain ways:
+```python
+<help> # Shows useful help information.
+```
+
+More tags will be released in version 1.1 JS, so stay tuned!<br>
+Happy notetaking!
+
+Fun Fact: Did you know `<reditalic>` was a tag before it got removed in the same update it was released while testing?
